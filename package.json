@@ -1,0 +1,31 @@
+{
+  "name": "array-source",
+  "version": "0.0.0",
+  "description": "Read arrays as standard WhatWG streams.",
+  "keywords": [
+    "binary",
+    "stream",
+    "reader"
+  ],
+  "homepage": "https://github.com/mbostock/array-source",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Mike Bostock",
+    "url": "https://bost.ocks.org/mike"
+  },
+  "main": "dist/array-source.js",
+  "module": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mbostock/array-source.git"
+  },
+  "scripts": {
+    "prepublish": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -n sources.array -o dist/array-source.js -- index.js && uglifyjs --preamble \"$(preamble)\" -o dist/array-source.min.js -cm -- dist/array-source.js",
+    "postpublish": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "package-preamble": "0.0",
+    "rollup": "0.34",
+    "uglify-js": "2"
+  }
+}

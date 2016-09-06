@@ -1,6 +1,6 @@
 {
   "name": "array-source",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Read arrays as standard WhatWG streams.",
   "keywords": [
     "binary",

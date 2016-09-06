@@ -4,10 +4,12 @@ A [readable stream reader](https://streams.spec.whatwg.org/#readable-stream-read
 
 ## API Reference
 
-<a name="array" href="#array">#</a> <b>array</b>(<i>buffer</i>) [<>](https://github.com/mbostock/array-source/blob/master/index.js#L4 "Source")
-<br><a href="#array">#</a> <b>array</b>(<i>array</i>)
+<a name="array" href="#array">#</a> <b>array</b>(<i>array</i>) [<>](https://github.com/mbostock/array-source/blob/master/index.js#L4 "Source")
+<br><a href="#array">#</a> <b>array</b>(<i>length</i>)
+<br><a href="#array">#</a> <b>array</b>(<i>object</i>)
+<br><a href="#array">#</a> <b>array</b>(<i>buffer</i>)
 
-Returns a sliceable *source* for the specified [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
+Returns a sliceable *source* for the specified [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array). If the specified *array* is not a Uint8Array, it is passed to the Uint8Array constructor to create a new array; see the [TypedArray constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax) for details.
 
 <a name="source_read" href="#source_read">#</a> <i>source</i>.<b>read</b>() [<>](https://github.com/mbostock/array-source/blob/master/read.js "Source")
 

@@ -2,7 +2,7 @@ import array_cancel from "./cancel";
 import array_read from "./read";
 
 export default function array(array) {
-  return new ArraySource(array instanceof ArrayBuffer ? new Uint8Array(array) : array);
+  return new ArraySource(array instanceof Uint8Array ? array : new Uint8Array(array));
 }
 
 function ArraySource(array) {

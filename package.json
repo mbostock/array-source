@@ -20,12 +20,12 @@
     "url": "http://github.com/mbostock/array-source.git"
   },
   "scripts": {
-    "prepublish": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -n sources.array -o dist/array-source.js -- index.js && uglifyjs --preamble \"$(preamble)\" -o dist/array-source.min.js -cm -- dist/array-source.js",
+    "prepublishOnly": "rm -rf dist && mkdir dist && rollup -c --banner \"$(preamble)\" && uglifyjs -b beautify=false,preamble=\"'$(preamble)'\" -o dist/array-source.min.js -c -m -- dist/array-source.js",
     "postpublish": "git push && git push --tags"
   },
   "devDependencies": {
-    "package-preamble": "0.0",
-    "rollup": "0.34",
-    "uglify-js": "2"
+    "package-preamble": "0.1",
+    "rollup": "0.49",
+    "uglify-js": "3"
   }
 }
